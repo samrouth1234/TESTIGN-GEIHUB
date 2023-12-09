@@ -1,10 +1,13 @@
+"use client"
 import React from 'react'
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+      const pathnaem = usePathname();
+      if (pathnaem.includes("about")) return null;
       return (
             <div>
-
-                  <footer class="bg-white dark:bg-gray-900">
+                  <footer class="bg-white dark:bg-gray-900  bottom-0 w-full">
                         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                               <div class="md:flex md:justify-between">
                                     <div class="mb-6 md:mb-0">
